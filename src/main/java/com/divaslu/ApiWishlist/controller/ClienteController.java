@@ -81,12 +81,13 @@ public class ClienteController {
 	}
 
 	@PutMapping
+	@ApiOperation(value = "Altera um cliente")
 	@ApiResponses(value = { @ApiResponse(code = 204, message = "Cliente alterado com sucesso."),
 	@ApiResponse(code = 400, message = "Falha nos dados enviados"),
 	@ApiResponse(code = 404, message = "Cliente não localizado"),
 	@ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
 
-	@ApiOperation(value = "Altera um cliente")
+	
 	public void put(@RequestBody Cliente cliente) {
 		service.updateCliente(cliente);
 	}

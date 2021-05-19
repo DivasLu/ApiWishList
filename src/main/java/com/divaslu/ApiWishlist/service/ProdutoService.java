@@ -1,7 +1,7 @@
 package com.divaslu.ApiWishlist.service;
 
 import java.util.List;
-import java.util.Optional;
+import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +14,7 @@ public class ProdutoService {
 	@Autowired
 	public ProdutoRepository repository;
 	
+	
 	public Produto saveProduto(Produto produto) {
         return repository.save(produto);
     }
@@ -22,15 +23,19 @@ public class ProdutoService {
         return repository.findAll();
     }
 
-    public Optional<Produto> getProdutoById(Long id) {
-        return repository.findById(id);
+	public Produto getProdutoById(Long id) {
+        return repository.findById(id).orElseThrow(
+        		() -> new EntityNotFoundException("Não encontrado " + id));
     }
     
+	//função void, não consigo personalizar msg de erro...
     public Produto deleteById(Long id) {
     	repository.deleteById(id);
     	System.out.println("Produto apagado com sucesso.");
         return null;
     }
+    
+    
 
     public Produto updateProduto(Produto produto) {
 		Produto produtoAlterado = repository.getOne(produto.getId());
@@ -44,5 +49,8 @@ public class ProdutoService {
                
              }
            return repository.save(produtoAlterado);
-   }	
+      }	
+    
+    
+    
 }
