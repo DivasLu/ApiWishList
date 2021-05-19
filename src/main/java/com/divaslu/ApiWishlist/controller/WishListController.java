@@ -27,8 +27,16 @@ public class WishListController {
             @ApiResponse(code = 400, message = "Falha nos dados enviados"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
 
-    public ResponseEntity<WishListItem> addWishListItem(@RequestBody WishListItem wish) {
-        return  ResponseEntity.status(HttpStatus.CREATED).body(service.saveWish(wish));
+    public ResponseEntity<?> addWishListItem(@RequestBody WishListItem wish) {
+        WishListItem wishCriado = service.saveWish(wish);
+        if(wishCriado != null){
+            return  ResponseEntity.status(HttpStatus.CREATED).body(wishCriado);
+        }
+        else
+        {
+            return new ResponseEntity<>("Limite de Wish atingido", HttpStatus.FORBIDDEN);
+        }
+
     }
 
     @GetMapping("/WishListItemById/{id}")
@@ -39,7 +47,15 @@ public class WishListController {
     public ResponseEntity<WishListItem> findWishListItemById(@PathVariable long id) {
         return ResponseEntity.ok( service.getWishById(id));
     }
-    
+
+    @GetMapping("/WishListItemByClienteAndProduto/{idCliente}/{idProduto}")
+    @ApiOperation(value = "Se um item está na wishList de determinado cliente, ele é retornado")
+    @ApiResponses(value = { @ApiResponse(code = 200, message = "Item obtido"),
+            @ApiResponse(code = 400, message = "Falha nos dados enviados"),
+            @ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
+    public ResponseEntity<WishListItem> findWishListItemById(@PathVariable long idCliente,@PathVariable long idProduto) {
+        return ResponseEntity.ok( service.getWishsByidProdutoAndidCliente(idProduto,idCliente));
+    }
     @GetMapping("/WishListItemByCliente/{id}")
     @ApiOperation(value = "Obtém uma lista de itens da wishlist de um cliente")
     @ApiResponses(value = { @ApiResponse(code = 200, message = "Itens obtidos"),
