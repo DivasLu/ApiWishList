@@ -1,10 +1,14 @@
 package com.divaslu.ApiWishlist.service;
 
 import java.util.List;
+import java.util.Optional;
+
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
 import com.divaslu.ApiWishlist.model.Produto;
 import com.divaslu.ApiWishlist.repository.ProdutoRepository;
 
@@ -23,12 +27,12 @@ public class ProdutoService {
         return repository.findAll();
     }
 
+	    
 	public Produto getProdutoById(Long id) {
         return repository.findById(id).orElseThrow(
         		() -> new EntityNotFoundException("Não encontrado " + id));
     }
-    
-	//função void, não consigo personalizar msg de erro...
+	
     public Produto deleteById(Long id) {
     	repository.deleteById(id);
     	System.out.println("Produto apagado com sucesso.");

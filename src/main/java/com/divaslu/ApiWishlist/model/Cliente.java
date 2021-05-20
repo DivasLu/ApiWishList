@@ -12,7 +12,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Data
-@AllArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -23,10 +22,10 @@ public class Cliente {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // usando o mysql "Identity fará o auto incremento.
-	long id;
-	String nomeCompleto;
-	String email;
-	String telefone;
+	private Long id;
+	private String nomeCompleto;
+	private String email;
+	private String telefone;
 
 	public Cliente(String nomeCompleto, String email, String telefone) {
 		this.nomeCompleto = nomeCompleto;

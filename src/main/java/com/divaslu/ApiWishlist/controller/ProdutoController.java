@@ -1,6 +1,8 @@
 package com.divaslu.ApiWishlist.controller;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,14 +15,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 
 import com.divaslu.ApiWishlist.model.Produto;
 import com.divaslu.ApiWishlist.service.ProdutoService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 @Api("API REST Wishlist") // nome da api no swagger
 @CrossOrigin(origins = "*") // quem pode acessar essa documentação
@@ -56,6 +58,7 @@ public class ProdutoController {
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Retorna um único Produto"),
 			@ApiResponse(code = 404, message = "Produto não localizado"),
 			@ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
+
 	public Produto getById(@PathVariable Long id) {
 		return service.getProdutoById(id);
 
@@ -67,12 +70,15 @@ public class ProdutoController {
 			@ApiResponse(code = 400, message = "Falha nos dados enviados"),
 			@ApiResponse(code = 404, message = "Produto não localizado"),
 			@ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
-	
-	 public ResponseEntity<String> deletarProduto(@PathVariable long id) { try {
-	 service.deleteById(id); return new ResponseEntity<>("Deletado com sucesso",
-	 HttpStatus.OK); } catch (Exception e) { return new
-	 ResponseEntity<>("Erro ao deletar produto" + e, HttpStatus.BAD_REQUEST); } }
-	 
+
+	public ResponseEntity<String> deletarProduto(@PathVariable long id) {
+		try {
+			service.deleteById(id);
+			return new ResponseEntity<>("Deletado com sucesso", HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>("Erro ao deletar produto" + e, HttpStatus.NOT_FOUND);
+		}
+	}
 
 	@PutMapping
 	@ApiOperation(value = "Altera um produto")
@@ -81,7 +87,6 @@ public class ProdutoController {
 			@ApiResponse(code = 404, message = "Produto não localizado"),
 			@ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
 
-	
 	public void put(@RequestBody Produto produto) {
 		service.updateProduto(produto);
 	}

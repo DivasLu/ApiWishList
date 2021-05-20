@@ -21,15 +21,8 @@ public class WishListItemService {
 	     return null;
 	 }
 	
-    
-    
-	/*
-	 * public WishListItem saveWish(WishListItem idProduto){ List<WishListItem>
-	 * NovaWishListItem = new ArrayList<>(); if(idProduto != null && idCliente){
-	 * NovaWishListItem.add(); } return repository.save().orElseThrow( () -> new
-	 * EntityNotFoundException("Não encontrado " + id)); }
-	 */
-    
+      
+	    
     public List<WishListItem> getWishsByClient(long idCliente) {
         return repository.findWishListItemByIdCliente(idCliente);
                
