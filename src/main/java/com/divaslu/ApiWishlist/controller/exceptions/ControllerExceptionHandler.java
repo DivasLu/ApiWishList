@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -22,6 +23,17 @@ public class ControllerExceptionHandler {
 		err.setMessage(e.getMessage());
 		err.setPath(request.getRequestURI());
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
+	}
+	@ExceptionHandler(NullPointerException.class)
+	public ResponseEntity<StandarError> methodArgumentNotValid(NullPointerException e,
+													HttpServletRequest request) {
+		StandarError err = new StandarError();
+		err.setTimestamp(Instant.now());
+		err.setStatus(HttpStatus.FORBIDDEN.value());
+		err.setError("Falha na validação");
+		err.setMessage(e.getMessage());
+		err.setPath(request.getRequestURI());
+		return ResponseEntity.status(HttpStatus.FORBIDDEN).body(err);
 	}
 
 }

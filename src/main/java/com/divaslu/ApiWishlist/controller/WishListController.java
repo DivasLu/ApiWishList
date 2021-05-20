@@ -29,15 +29,7 @@ public class WishListController {
             @ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
 
     public ResponseEntity<?> addWishListItem(@RequestBody WishListItem wish) {
-        WishListItem wishCriado = service.saveWish(wish);
-        if(wishCriado != null){
-            return  ResponseEntity.status(HttpStatus.CREATED).body(wishCriado);
-        }
-        else
-        {
-            return new ResponseEntity<>("Esse item já está na wishlist ou o Limite de 20 wishes já foi atingido", HttpStatus.FORBIDDEN);
-        }
-
+        return  ResponseEntity.status(HttpStatus.CREATED).body(service.saveWish(wish));
     }
 
     @GetMapping("/WishListItemById/{id}")
@@ -57,11 +49,7 @@ public class WishListController {
             @ApiResponse(code = 400, message = "Falha nos dados enviados"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
     public ResponseEntity<?> findWishListItemById(@PathVariable long idCliente,@PathVariable long idProduto) {
-        WishListItem item = service.getWishsByidProdutoAndidCliente(idProduto,idCliente);
-        if(item == null){
-            return new ResponseEntity<>("Esse item não existe na wishList desse cliente", HttpStatus.NOT_FOUND);
-        }
-        return ResponseEntity.ok(item);
+        return ResponseEntity.ok(service.getWishsByidProdutoAndidCliente(idProduto,idCliente));
     }
     
     @GetMapping("/WishListItemByCliente/{id}")
