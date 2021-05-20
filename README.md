@@ -6,8 +6,6 @@
 
 <h2>🚀 Luiza Code - 2° Edição - DESAFIO FINAL 🚀</h2>
 
----
-
 ## 💻 Sobre o Projeto
 
 Sistema de Gerenciamento com objetivo desenvolver um serviço HTTP aplicando a funcionalidade de Wishlist do cliente.
@@ -55,6 +53,8 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 > E siga as instruções e pre-requisitos da documentação.
 
+---
+
 #### 🎲 Rodando o Backend (servidor)
 
 ```
@@ -89,7 +89,7 @@ $ cd ApiWishlist
  - [Rafaela Nunes](https://www.linkedin.com/in/rafaela-nunes-de-oliveira)
  - [Taísa Aímola]()
 	  
-    
+---    
     
 ## 💪 Como contribuir para o projeto
 
@@ -100,12 +100,7 @@ $ cd ApiWishlist
 
 ---
 
----
-
 ## 📝 Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
-
-
----
 
