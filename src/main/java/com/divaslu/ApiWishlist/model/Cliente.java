@@ -5,14 +5,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Data
-@AllArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -23,10 +22,13 @@ public class Cliente {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // usando o mysql "Identity fará o auto incremento.
-	long id;
-	String nomeCompleto;
-	String email;
-	String telefone;
+	private Long id;
+	@NotEmpty
+	private String nomeCompleto;
+	@NotEmpty
+	private String email;
+	@NotEmpty
+	private String telefone;
 
 	public Cliente(String nomeCompleto, String email, String telefone) {
 		this.nomeCompleto = nomeCompleto;

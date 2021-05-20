@@ -1,12 +1,12 @@
 package com.divaslu.ApiWishlist.service;
 
-import com.divaslu.ApiWishlist.model.WishListItem;
-import com.divaslu.ApiWishlist.repository.WishListItemRepository;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.divaslu.ApiWishlist.model.WishListItem;
+import com.divaslu.ApiWishlist.repository.WishListItemRepository;
 
 @Service
 public class WishListItemService {

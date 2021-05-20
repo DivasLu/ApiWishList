@@ -78,7 +78,10 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<excludes>
-
+					<exclude>**/SwaggerConfig.java</exclude>
+        			<exclude>**/ControllerExceptionHandler.java</exclude>
+					<exclude>**/StandarError.java</exclude>
+        			
 					</excludes>
 				</configuration>
 			</plugin>

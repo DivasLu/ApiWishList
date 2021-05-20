@@ -1,5 +1,6 @@
 package com.divaslu.ApiWishlist.controller;
 
+import com.divaslu.ApiWishlist.model.Produto;
 import com.divaslu.ApiWishlist.model.WishListItem;
 import com.divaslu.ApiWishlist.service.WishListItemService;
 import io.swagger.annotations.Api;
@@ -13,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Api("API REST Wishlist") // nome da api no swagger
-@CrossOrigin(origins = "*") // quem pode acessar essa documentação
+@Api("API REST Wishlist") 
+@CrossOrigin(origins = "*") 
 @RestController // é quem define as rotas ou url
 @RequestMapping("/wishlist")
 public class WishListController {
@@ -44,10 +45,12 @@ public class WishListController {
     @ApiResponses(value = { @ApiResponse(code = 200, message = "Item obtido"),
             @ApiResponse(code = 400, message = "Falha nos dados enviados"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
-    public ResponseEntity<WishListItem> findWishListItemById(@PathVariable long id) {
-        return ResponseEntity.ok( service.getWishById(id));
+    public WishListItem findWishListItemById(@PathVariable long id) {
+        return service.getWishById(id);
     }
 
+    
+    
     @GetMapping("/WishListItemByClienteAndProduto/{idCliente}/{idProduto}")
     @ApiOperation(value = "Se um item está na wishList de determinado cliente, ele é retornado")
     @ApiResponses(value = { @ApiResponse(code = 200, message = "Item obtido"),
@@ -60,6 +63,7 @@ public class WishListController {
         }
         return ResponseEntity.ok(item);
     }
+    
     @GetMapping("/WishListItemByCliente/{id}")
     @ApiOperation(value = "Obtém uma lista de itens da wishlist de um cliente")
     @ApiResponses(value = { @ApiResponse(code = 200, message = "Itens obtidos"),
