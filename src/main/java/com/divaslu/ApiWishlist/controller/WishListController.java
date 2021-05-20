@@ -34,7 +34,7 @@ public class WishListController {
         }
         else
         {
-            return new ResponseEntity<>("Limite de Wish atingido", HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>("Esse item já está na wishlist ou o Limite de 20 wishes já foi atingido", HttpStatus.FORBIDDEN);
         }
 
     }
@@ -53,8 +53,12 @@ public class WishListController {
     @ApiResponses(value = { @ApiResponse(code = 200, message = "Item obtido"),
             @ApiResponse(code = 400, message = "Falha nos dados enviados"),
             @ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
-    public ResponseEntity<WishListItem> findWishListItemById(@PathVariable long idCliente,@PathVariable long idProduto) {
-        return ResponseEntity.ok( service.getWishsByidProdutoAndidCliente(idProduto,idCliente));
+    public ResponseEntity<?> findWishListItemById(@PathVariable long idCliente,@PathVariable long idProduto) {
+        WishListItem item = service.getWishsByidProdutoAndidCliente(idProduto,idCliente);
+        if(item == null){
+            return new ResponseEntity<>("Esse item não existe na wishList desse cliente", HttpStatus.NOT_FOUND);
+        }
+        return ResponseEntity.ok(item);
     }
     @GetMapping("/WishListItemByCliente/{id}")
     @ApiOperation(value = "Obtém uma lista de itens da wishlist de um cliente")
