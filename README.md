@@ -60,7 +60,7 @@ $ cd ApiWishlist
 
 #### [](https://github.com/DivasLu/ApiWishlist#utilitarios)**Utilitários**
 
--   Organização: **[Trello]()**
+-   Organização: **[Trello](https://trello.com/b/jwBE2zAm/atividades)**
 -   API:  **[Swagger UI](https://swagger.io/tools/swagger-ui/)**
 -   Editor: **[Eclipse](https://www.eclipse.org/)**
 -   Markdown:  **[Markdown Emoji](https://gist.github.com/rxaviers/7360908)**
