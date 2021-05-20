@@ -1,22 +1,21 @@
-
-<h2>🚀 Luiza Code - 2° Edição - DESAFIO FINAL 🚀</h2>
-
-<p>
-    
+  
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
   <a href="https://github.com/DivasLu/ApiWishlist/blob/master/LICENSE">
-  </a>
+  </a>	
+		
+
+# 🚀 Luiza Code - 2° Edição - DESAFIO FINAL 🚀
 
 ## 💻 Sobre o Projeto
 
 Sistema de Gerenciamento com objetivo desenvolver um serviço HTTP aplicando a funcionalidade de Wishlist do cliente.
 
-Projeto desenvolvido durante o **Treinamento Java ** oferecida pela [Gama Academy](https://www.gama.academy/) em parceria com o [Magazine Luiza](https://www.magazineluiza.com/br-pt).
+- Projeto desenvolvido durante o *Treinamento Java * oferecida pela [Gama Academy](https://www.gama.academy/) em parceria com o [Magazine Luiza](https://www.magazineluiza.com/br-pt).
 
 ---
 
 ## :+1: Aprendizados
-Conceitos da linguagem Java, Testes Unitários, Git, Banco de Dados, Spring Boot e JUnit.
+- Conceitos da linguagem Java, Testes Unitários, Git, Banco de Dados, Spring Boot e JUnit.
 
 ---
 
@@ -26,26 +25,20 @@ Conceitos da linguagem Java, Testes Unitários, Git, Banco de Dados, Spring Boot
 
 ---
 
-## ⚙️ [](https://github.com/EdileneLopes/Api-alunos#funcionalidades)**Funcionalidades**
+## ⚙️ [](https://github.com/DivasLu/ApiWishlist#funcionalidades)**Funcionalidades**
 
 1) Adicionar um produto na Wishlist do cliente
 2) Remover um produto da Wishlist do cliente
 3) Consultar todos os produtos da Wishlist do cliente
 4) Consultar se um determinado produto está na Wishlist do cliente
 
+---
 
-## 🚀 Como executar o projeto
-
-- [Java](https://github.com/DivasLu/ApiWishlist)
-
-💡 O Backend deve estar sendo executado para funcionar.
-
-### Pré-requisitos
+### :hammer: Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [SQL Server(Versão 2019)](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads) e [Maven](https://maven.apache.org/download.cgi).
-Além disto é bom ter um editor para trabalhar com o código como [Eclipse](https://www.eclipse.org/downloads/).
-E para testar e consumir os Endpoints use [Postman](https://www.postman.com/)
+[Java](https://www.oracle.com/br/java/technologies/javase-jdk11-downloads.html), [My SQL Workbench](https://dev.mysql.com/downloads/workbench/), [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads), [Maven](https://maven.apache.org/download.cgi) e [Git](https://git-scm.com). 
+ Além disso é bom ter um editor para trabalhar com o código como [Eclipse](https://www.eclipse.org/downloads/)
 
 > Para executar o projeto você obrigatoriamente deve ter o repositorio de Java.
 > Acesse [repositorio](https://github.com/DivasLu/ApiWishlist).
@@ -64,14 +57,10 @@ $ cd ApiWishlist
 
 # O servidor inciará na porta:8080 - Acesse: http://localhost:8080
 ```
-[Acesse a Documentação com Swagger UI](http://localhost:8080/swagger-ui.html)
-```
-http://localhost:8080/swagger-ui.html
-```
 
-#### [](https://github.com/EdileneLopes/Api-alunos#utilitarios)**Utilitários**
+#### [](https://github.com/DivasLu/ApiWishlist#utilitarios)**Utilitários**
 
--   Organização: **[Trello](https://trello.com/)**
+-   Organização: **[Trello](https://trello.com/b/jwBE2zAm/atividades)**
 -   API:  **[Swagger UI](https://swagger.io/tools/swagger-ui/)**
 -   Editor: **[Eclipse](https://www.eclipse.org/)**
 -   Markdown:  **[Markdown Emoji](https://gist.github.com/rxaviers/7360908)**
@@ -83,13 +72,13 @@ http://localhost:8080/swagger-ui.html
 
 💜 Um super parabens 👏 para essa equipe nota 10 que fez tudo sair do papel :)
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/EdileneLopes"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/60043558?v=4" width="150px;" alt=""/><br /><sub><b>Edilene Lopes</b></sub></a><br /><a href="https://www.linkedin.com/in/edilene-lopes/" title="Gamados por Java">:family: :books:</a></td>
-    <td align="center"><a href="https://github.com/Rafaela1507"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/" width="150px;" alt=""/><br />href="https://www.linkedin.com/in/rafaela-nunes-de-oliveira/>:coffee:  :musical_note:</a></td>
+ - [Edilene Lopes](https://www.linkedin.com/in/edilene-lopes)
+ - [Giovanna Polissici](https://www.linkedin.com/in/giovanna-p-932771156/)
+ - [Juliana Peixoto](https://www.linkedin.com/in/juliana-mattos-peixoto-0b574915a/)
+ - [Rafaela Nunes](https://www.linkedin.com/in/rafaela-nunes-de-oliveira)
+ - Taísa Aímola
 	  
-	  
-    
+---    
     
 ## 💪 Como contribuir para o projeto
 
@@ -100,13 +89,7 @@ http://localhost:8080/swagger-ui.html
 
 ---
 
----
-
 ## 📝 Licença
 
-Este projeto esta sobe a licença [MIT](./LICENSE).
-
-<p><a href="#"><g-emoji class="g-emoji" alias="arrow_up" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b06.png">⬆</g-emoji> Voltar ao topo</a><br></p>
-
----
+Este projeto esta sobe a licença [MIT](./LICENSE). :heavy_check_mark:
 
