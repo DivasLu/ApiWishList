@@ -53,6 +53,7 @@ public class WishListItemService {
     private boolean ValidaWish(WishListItem wish){
         List<WishListItem> wishDoCliente =  getWishsByClient(wish.getIdCliente());
         int quantidadeDeWishs = wishDoCliente != null? wishDoCliente.size(): 0;
-        return quantidadeDeWishs < 20;
+        WishListItem desejoJaExiste =  getWishsByidProdutoAndidCliente(wish.getIdProduto(), wish.getIdCliente());
+        return quantidadeDeWishs < 20 && desejoJaExiste == null;
     }
 }
