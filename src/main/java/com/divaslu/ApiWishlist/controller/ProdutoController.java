@@ -70,16 +70,12 @@ public class ProdutoController {
 			@ApiResponse(code = 400, message = "Falha nos dados enviados"),
 			@ApiResponse(code = 404, message = "Produto não localizado"),
 			@ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
-
-	public ResponseEntity<String> deletarProduto(@PathVariable long id) {
-		try {
-			service.deleteById(id);
-			return new ResponseEntity<>("Deletado com sucesso", HttpStatus.OK);
-		} catch (Exception e) {
-			return new ResponseEntity<>("Erro ao deletar produto" + e, HttpStatus.NOT_FOUND);
-		}
+	
+	public Produto deleteById(@PathVariable Long id) {
+		return service.deleteById(id);
 	}
 
+	
 	@PutMapping
 	@ApiOperation(value = "Altera um produto")
 	@ApiResponses(value = { @ApiResponse(code = 204, message = "Produto alterado com sucesso."),

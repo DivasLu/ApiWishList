@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.divaslu.ApiWishlist.model.Cliente;
+import com.divaslu.ApiWishlist.model.Produto;
 import com.divaslu.ApiWishlist.service.ClienteService;
 
 import io.swagger.annotations.Api;
@@ -71,15 +72,11 @@ public class ClienteController {
 	@ApiResponse(code = 404, message = "Cliente não localizado"),
 	@ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
 
-	public ResponseEntity<String> deletarCliente(@PathVariable long id) {
-		try {
-			service.deleteById(id);
-			return new ResponseEntity<>("Deletado com sucesso", HttpStatus.OK);
-		} catch (Exception e) {
-			return new ResponseEntity<>("Erro ao deletar cliente" + e, HttpStatus.BAD_REQUEST);
-		}
+	public Cliente deleteById(@PathVariable Long id) {
+		return service.deleteById(id);
 	}
-
+	
+	
 	@PutMapping
 	@ApiOperation(value = "Altera um cliente")
 	@ApiResponses(value = { @ApiResponse(code = 204, message = "Cliente alterado com sucesso."),
