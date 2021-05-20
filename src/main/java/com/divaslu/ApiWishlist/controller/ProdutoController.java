@@ -32,7 +32,7 @@ public class ProdutoController {
 	@Autowired // é a ligação entre os objetos
 	public ProdutoService service;
 
-	@PostMapping
+	@PostMapping("/addProduto")
 	@ApiOperation(value = "Salva um produto")
 	@ApiResponses(value = { @ApiResponse(code = 201, message = "Cria um Produto"),
 			@ApiResponse(code = 400, message = "Falha nos dados enviados"),

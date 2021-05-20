@@ -5,7 +5,8 @@ package com.divaslu.ApiWishlist;
 	import org.springframework.test.web.servlet.MockMvc;
 
 	import com.divaslu.ApiWishlist.domain.model.ProdutoBuilder;
-	import com.divaslu.ApiWishlist.model.Produto;
+import com.divaslu.ApiWishlist.domain.model.WishListBuilder;
+import com.divaslu.ApiWishlist.model.Produto;
 	import com.divaslu.ApiWishlist.repository.ProdutoRepository;
 
 	public class BaseTest {
@@ -15,6 +16,12 @@ package com.divaslu.ApiWishlist;
 	        Produto produto = new ProdutoBuilder().defaultValues();
 	        produtoRepository.save(produto);
 	    }
+		
+		/*@BeforeEach
+	    public void setup(){
+	        Produto wishListItem = new WishListBuilder().defaultValuesWishList();
+	        produtoRepository.save(wishListItem);
+	    }*/
 		
 	    @Autowired
 	    protected MockMvc mockMvc;
