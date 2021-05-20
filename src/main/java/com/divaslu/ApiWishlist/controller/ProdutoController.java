@@ -87,8 +87,8 @@ public class ProdutoController {
 			@ApiResponse(code = 404, message = "Produto não localizado"),
 			@ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
 
-	public void put(@RequestBody Produto produto) {
-		service.updateProduto(produto);
+	public Produto put(@RequestBody Produto produto) {
+		return service.updateProduto(produto);
 	}
 
 }

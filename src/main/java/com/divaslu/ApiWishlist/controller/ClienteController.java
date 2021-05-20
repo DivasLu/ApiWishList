@@ -88,8 +88,8 @@ public class ClienteController {
 	@ApiResponse(code = 500, message = "Foi gerada uma exceção."), })
 
 	
-	public void put(@RequestBody Cliente cliente) {
-		service.updateCliente(cliente);
+	public Cliente put(@RequestBody Cliente cliente) {
+		return service.updateCliente(cliente);
 	}
 
 }

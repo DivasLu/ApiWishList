@@ -34,16 +34,19 @@ public class ClienteService {
 		return null;
 	}
 
+		
 	public Cliente updateCliente(Cliente cliente) {
+		
 		Cliente clienteAlterado = repository.getOne(cliente.getId());
-
+				
 		if (clienteAlterado != null) {
 
 			clienteAlterado.setNomeCompleto(cliente.getNomeCompleto());
 			clienteAlterado.setEmail(cliente.getEmail());
 			clienteAlterado.setTelefone(cliente.getTelefone());
-
+			repository.save(clienteAlterado);
 		}
 		return repository.save(clienteAlterado);
-	}
+
+}
 }

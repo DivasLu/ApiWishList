@@ -50,6 +50,7 @@ public class ProdutoService {
                produtoAlterado.setDescricao(produto.getDescricao());
                produtoAlterado.setCor(produto.getCor());
                produtoAlterado.setValor(produto.getValor());
+               repository.save(produtoAlterado);
                
              }
            return repository.save(produtoAlterado);
