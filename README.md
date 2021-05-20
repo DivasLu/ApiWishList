@@ -1,21 +1,21 @@
-<p>
-    
+  
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
   <a href="https://github.com/DivasLu/ApiWishlist/blob/master/LICENSE">
   </a>	
+		
 
-<h2>🚀 Luiza Code - 2° Edição - DESAFIO FINAL 🚀</h2>
+# 🚀 Luiza Code - 2° Edição - DESAFIO FINAL 🚀
 
 ## 💻 Sobre o Projeto
 
 Sistema de Gerenciamento com objetivo desenvolver um serviço HTTP aplicando a funcionalidade de Wishlist do cliente.
 
-Projeto desenvolvido durante o **Treinamento Java ** oferecida pela [Gama Academy](https://www.gama.academy/) em parceria com o [Magazine Luiza](https://www.magazineluiza.com/br-pt).
+- Projeto desenvolvido durante o *Treinamento Java * oferecida pela [Gama Academy](https://www.gama.academy/) em parceria com o [Magazine Luiza](https://www.magazineluiza.com/br-pt).
 
 ---
 
 ## :+1: Aprendizados
-Conceitos da linguagem Java, Testes Unitários, Git, Banco de Dados, Spring Boot e JUnit.
+- Conceitos da linguagem Java, Testes Unitários, Git, Banco de Dados, Spring Boot e JUnit.
 
 ---
 
@@ -34,15 +34,7 @@ Conceitos da linguagem Java, Testes Unitários, Git, Banco de Dados, Spring Boot
 
 ---
 
-## 🚀 Como executar o projeto
-
-- [Através desse repostório](https://github.com/DivasLu/ApiWishlist)
-
-💡 O Backend deve estar sendo executado para funcionar.
-
----
-
-### Pré-requisitos
+### :hammer: Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Java](https://www.oracle.com/br/java/technologies/javase-jdk11-downloads.html), [My SQL Workbench](https://dev.mysql.com/downloads/workbench/), [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads), [Maven](https://maven.apache.org/download.cgi) e [Git](https://git-scm.com). 
@@ -52,8 +44,6 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 > Acesse [repositorio](https://github.com/DivasLu/ApiWishlist).
 
 > E siga as instruções e pre-requisitos da documentação.
-
----
 
 #### 🎲 Rodando o Backend (servidor)
 
@@ -67,7 +57,6 @@ $ cd ApiWishlist
 
 # O servidor inciará na porta:8080 - Acesse: http://localhost:8080
 ```
----
 
 #### [](https://github.com/DivasLu/ApiWishlist#utilitarios)**Utilitários**
 
@@ -84,10 +73,10 @@ $ cd ApiWishlist
 💜 Um super parabens 👏 para essa equipe nota 10 que fez tudo sair do papel :)
 
  - [Edilene Lopes](https://www.linkedin.com/in/edilene-lopes)
- - [Giovanna Polissici]()
- - [Juliana Peixoto](https://www.linkedin.com/in/juliana-mattos-peixoto)
+ - [Giovanna Polissici](https://www.linkedin.com/in/giovanna-p-932771156/)
+ - [Juliana Peixoto](https://www.linkedin.com/in/juliana-mattos-peixoto-0b574915a/)
  - [Rafaela Nunes](https://www.linkedin.com/in/rafaela-nunes-de-oliveira)
- - [Taísa Aímola]()
+ - Taísa Aímola
 	  
 ---    
     
@@ -102,5 +91,5 @@ $ cd ApiWishlist
 
 ## 📝 Licença
 
-Este projeto esta sobe a licença [MIT](./LICENSE).
+Este projeto esta sobe a licença [MIT](./LICENSE). :heavy_check_mark:
 
