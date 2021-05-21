@@ -4,6 +4,7 @@ import java.time.Instant;
 
 import javax.persistence.EntityNotFoundException;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ValidationException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,8 +25,8 @@ public class ControllerExceptionHandler {
 		err.setPath(request.getRequestURI());
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
 	}
-	@ExceptionHandler(NullPointerException.class)
-	public ResponseEntity<StandarError> methodArgumentNotValid(NullPointerException e,
+	@ExceptionHandler(ValidationException.class)
+	public ResponseEntity<StandarError> validationException(ValidationException e,
 													HttpServletRequest request) {
 		StandarError err = new StandarError();
 		err.setTimestamp(Instant.now());

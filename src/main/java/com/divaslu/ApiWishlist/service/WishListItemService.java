@@ -15,6 +15,7 @@ import com.divaslu.ApiWishlist.repository.WishListItemRepository;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import javax.persistence.EntityNotFoundException;
+import javax.validation.ValidationException;
 
 @Service
 public class WishListItemService {
@@ -33,10 +34,10 @@ public class WishListItemService {
          Optional<Cliente> ClienteExiste = repositoryCliente.findById(wish.getIdCliente());
 
          if(desejoJaExiste.isPresent()){
-             throw new NullPointerException("Esse item já se encontra na wishlist do Cliente");
+             throw new ValidationException("Esse item já se encontra na wishlist do Cliente");
          }
          if(quantidadeDeWishs > 19){
-             throw new NullPointerException("Limite máximo de 20 Wishes Atingido");
+             throw new ValidationException("Limite máximo de 20 Wishes Atingido");
          }
 	     if(!produtoExiste.isPresent()){
              throw new EntityNotFoundException("Não encontrado nenhum produto com o ID"+ wish.getIdProduto());
