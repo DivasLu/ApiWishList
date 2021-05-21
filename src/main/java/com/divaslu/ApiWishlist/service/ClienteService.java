@@ -1,10 +1,12 @@
 package com.divaslu.ApiWishlist.service;
 
 import java.util.List;
+
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.divaslu.ApiWishlist.model.Cliente;
 import com.divaslu.ApiWishlist.repository.ClienteRepository;
 
@@ -32,16 +34,19 @@ public class ClienteService {
 		return null;
 	}
 
+		
 	public Cliente updateCliente(Cliente cliente) {
+		
 		Cliente clienteAlterado = repository.getOne(cliente.getId());
-
+				
 		if (clienteAlterado != null) {
 
 			clienteAlterado.setNomeCompleto(cliente.getNomeCompleto());
 			clienteAlterado.setEmail(cliente.getEmail());
 			clienteAlterado.setTelefone(cliente.getTelefone());
-
+			repository.save(clienteAlterado);
 		}
 		return repository.save(clienteAlterado);
-	}
+
+}
 }
