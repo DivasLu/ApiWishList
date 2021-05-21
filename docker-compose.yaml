@@ -1,0 +1,27 @@
+version: '3'
+
+volumes:
+    mysql_data:
+        driver: local
+
+services:
+    mysql:
+        image: mysql:5.7
+        volumes:
+            - mysql_data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: db_wihslist
+            MYSQL_PASSWORD: root
+        ports:
+            - 3307:3306
+    api:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: whishlistapi
+        container_name: wishlist_api
+        ports:
+            - 8080:8080
+        depends_on:
+            - mysql
