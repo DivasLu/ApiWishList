@@ -23,11 +23,8 @@ public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // usando o mysql "Identity fará o auto incremento.
 	private Long id;
-	@NotEmpty
 	private String nomeCompleto;
-	@NotEmpty
 	private String email;
-	@NotEmpty
 	private String telefone;
 
 	public Cliente(String nomeCompleto, String email, String telefone) {

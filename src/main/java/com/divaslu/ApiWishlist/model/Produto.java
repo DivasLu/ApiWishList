@@ -21,12 +21,10 @@ public class Produto {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY) 
 	private Long id;
-	
-	@NotEmpty
+
 	private String nome;
 	private String descricao;
 	private String cor;
-	@NotEmpty
 	private double valor;
 	
 	
