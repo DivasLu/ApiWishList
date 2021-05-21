@@ -58,24 +58,21 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 # Coloque no terminal o código abaixo para utilizarmos o Docker:
  $ docker-compose build 
  
-☝ O processo acima irá demorar alguns segundos.
+☝ O processo acima irá demorar alguns minutos.
    
 # Ainda no terminal coloque o código:
  $ docker-compose up
-   
-# Como o MySQL será configurado pela primeira vez, aconselhamos a fazer os seguintes passos após os comandos anteriores
-
-   Ctrl + c
- $ docker-compose up
-   
+ 
 💡 Nas próximas vezes será usado apenas o código abaixo em seu terminal 💡
 
   $ docker-compose up
+  
+ # O servidor inciará na porta:8080 - Acesse: http://localhost:8080
 ```
 
 #### [](https://github.com/DivasLu/ApiWishlist#utilitarios)**Utilitários**
 
--   Organização: **[Trello](https://trello.com/b/jwBE2zAm/atividades)**
+-   Organização: **[Trello](https://trello.com.br)**
 -   API:  **[Swagger UI](https://swagger.io/tools/swagger-ui/)**
 -   Editor: **[Eclipse](https://www.eclipse.org/)**
 -   Markdown:  **[Markdown Emoji](https://gist.github.com/rxaviers/7360908)**
