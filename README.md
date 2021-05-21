@@ -42,37 +42,36 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 > Para executar o projeto você obrigatoriamente deve ter o repositorio de Java.
 > Acesse [repositorio](https://github.com/DivasLu/ApiWishlist).
 
-> E siga as instruções e pre-requisitos da documentação.
+> E siga as instruções e pre-requisitos da documentação
 
 #### 🎲 Rodando o Backend (servidor)
 
+ ```
+ # Clone este repositório
+ git clone https://github.com/DivasLu/ApiWishlist
 
-# Clone este repositório
-$ git clone https://github.com/DivasLu/ApiWishlist
-
-# Acesse a pasta do projeto no terminal de sua preferencia bash/cmd
-$ cd ApiWishlist
+ # Acesse a pasta do projeto no terminal de sua preferencia bash/cmd:
+ $ cd ApiWishlist
 
 💡 Os passos abaixo serão usados apenas na primeira vez que rodar o projeto em sua máquina 💡
 
-   # Coloque no terminal o código abaixo para utilizarmos o Docker
-   $ docker-compose build 
-
-   ☝ O processo acima irá demorar alguns segundos.
-
-   # Ainda no terminal coloque o código
-   $  docker-compose up
-
- # Como o MySQL será configurado pela primeira vez, aconselhamos a fazer os seguintes passos após os comandos anteriores: 
+# Coloque no terminal o código abaixo para utilizarmos o Docker:
+ $ docker-compose build 
  
-   Ctrl + c
-   $ docker-compose up
+☝ O processo acima irá demorar alguns segundos.
+   
+# Ainda no terminal coloque o código:
+ $ docker-compose up
+   
+# Como o MySQL será configurado pela primeira vez, aconselhamos a fazer os seguintes passos após os comandos anteriores
 
+   Ctrl + c
+ $ docker-compose up
+   
 💡 Nas próximas vezes será usado apenas o código abaixo em seu terminal 💡
 
-  $  docker-compose up
-
-
+  $ docker-compose up
+```
 
 #### [](https://github.com/DivasLu/ApiWishlist#utilitarios)**Utilitários**
 
